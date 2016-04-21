@@ -1,86 +1,63 @@
+//: Playground - noun: a place where people can play
 
+import UIKit
 
-var str = "Hello, Coursera"
+enum Velocidades:Int {
 
-enum Velocidades: Int {
-    case Apagado  = 0 , VelocidadBaja  = 20, VelocidadMedia = 50, VelocidadAlta = 120
+    case Apagado = 0
+    case VelocidadBaja = 20;
+    case VelocidadMedia = 50;
+    case VelocidadAlta = 120;
     
-    func calculaVelocidades() -> Int{
-            return Velocidades.VelocidadMedia.rawValue-self.rawValue
-        }
-    
-    init( velocidadInicial : Velocidades ){
-            self = velocidadInicial
-        }
-    
-  
-
+    init(VelocidadInicial: Velocidades){
+        self = VelocidadInicial;
     }
-
-    
-var Velocidad = Velocidades.Apagado
-Velocidad.rawValue
-Velocidad.calculaVelocidades()
-
-
-
-struct Auto{
-    var marca :  String
-    var precio : Double
-    var velocidad : Velocidades
-    
-    
-    init(marca : String, precio : Double , velocidad : Velocidades){
-        self.marca = marca
-        self.precio = precio
-        self.velocidad = velocidad
-    }
-    
-    func obtenerDescripcion() -> String{
-        return "marca: \(marca) precio:\(precio) velocidad:\(velocidad)"
-    }
-    
-    mutating func cambioDeVelocidad( ) -> ( actual : Int, velocidadEnCadena: String){
-        
-        if(self.velocidad.rawValue == 0){
-            let Velocidad1 = Velocidades.VelocidadBaja
-            self.velocidad = Velocidad1
-            return (20, "VelocidadBaja")
-            
-        }
-        if(self.velocidad.rawValue == 20){
-            let Velocidad1 = Velocidades.VelocidadMedia
-             self.velocidad = Velocidad1
-            return (50, "VelocidadMedia")
-            
-        }
-        if(self.velocidad.rawValue == 50){
-            let Velocidad1 = Velocidades.VelocidadAlta
-             self.velocidad = Velocidad1
-            return (120, "VelocidadAlta")
-            
-        }
-        if(self.velocidad.rawValue == 120){
-            let Velocidad1 = Velocidades.VelocidadMedia
-             self.velocidad = Velocidad1
-            return (50, "VelocidadMedia")
-            
-        }
-        return(00, "Apagado")
-
-    }
-    
 }
 
-var Automovil = Auto(marca: "Mercedes", precio: 1.0, velocidad: Velocidad)
-
-print(Automovil.marca)
-
-
-
-var numeros = 0...20
-for numero in numeros {
-        print(Automovil.cambioDeVelocidad())
-    // print(numero,"velocidad: \(Automovil.cambio")
+class Auto{
     
+    var velocidad:Velocidades;
+    func cambioDeVelocidad() -> (actual: Int, velocidadEnCadena: String){
+        
+    switch velocidad.rawValue {
+            
+        case 0:
+            velocidad = Velocidades.VelocidadBaja;
+            return (20, "Velocidad Baja")
+            
+        case 20:
+            velocidad = Velocidades.VelocidadMedia;
+            return (50, "Velocidad Media")
+            
+        case 50:
+            velocidad = Velocidades.VelocidadAlta;
+            return (120, "Velocidad Alta")
+            
+        case 120:
+            velocidad = Velocidades.VelocidadMedia;
+            return (50, "Velocidad Media")
+            
+        default:
+            return (0, "Apagado")
+            
+        }
+    }
+    
+    init(){
+        self.velocidad = Velocidades.init(VelocidadInicial: Velocidades.Apagado);
+    }
+    
+    
+    
+
+}
+
+var auto:Auto = Auto()
+
+for i in 0..<20{
+    
+    print(auto.velocidad.rawValue, auto.velocidad)
+    auto.cambioDeVelocidad()
+    
+
 }
