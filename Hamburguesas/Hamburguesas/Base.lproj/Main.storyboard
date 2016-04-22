@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hamburguesas" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWx-N5-eMI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Quiero una hamburguesa!"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="112" y="370" width="177" height="33"/>
+                                </variation>
+                                <connections>
+                                    <action selector="dameHamburguesa:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IRM-sM-7jk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYt-7M-Ssw">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="179" y="86" width="42" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKD-hX-ftk">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="179" y="142" width="42" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SYt-7M-Ssw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-203.5" id="8r5-0h-lmm"/>
+                            <constraint firstItem="SYt-7M-Ssw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AjU-Ig-Mbp"/>
+                            <constraint firstItem="uKD-hX-ftk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HSP-ft-EAu"/>
+                            <constraint firstItem="lWx-N5-eMI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JvI-bf-IlZ"/>
+                            <constraint firstItem="uKD-hX-ftk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-155.5" id="LN9-gv-g2D"/>
+                            <constraint firstItem="lWx-N5-eMI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T21-Dw-pXt"/>
+                            <constraint firstItem="lWx-N5-eMI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="86.5" id="mws-wP-WM8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="lWx-N5-eMI"/>
+                                <exclude reference="SYt-7M-Ssw"/>
+                                <exclude reference="uKD-hX-ftk"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8r5-0h-lmm"/>
+                                <exclude reference="AjU-Ig-Mbp"/>
+                                <exclude reference="HSP-ft-EAu"/>
+                                <exclude reference="LN9-gv-g2D"/>
+                                <exclude reference="JvI-bf-IlZ"/>
+                                <exclude reference="T21-Dw-pXt"/>
+                                <exclude reference="mws-wP-WM8"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="lWx-N5-eMI"/>
+                                <include reference="SYt-7M-Ssw"/>
+                                <include reference="uKD-hX-ftk"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8r5-0h-lmm"/>
+                                <include reference="AjU-Ig-Mbp"/>
+                                <include reference="HSP-ft-EAu"/>
+                                <include reference="LN9-gv-g2D"/>
+                                <exclude reference="JvI-bf-IlZ"/>
+                                <include reference="T21-Dw-pXt"/>
+                                <include reference="mws-wP-WM8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="pais" destination="SYt-7M-Ssw" id="6D8-Fk-jEe"/>
+                        <outlet property="tipoDeHamburguesa" destination="uKD-hX-ftk" id="K0j-R3-0iq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="807" y="271"/>
+        </scene>
+    </scenes>
+</document>
