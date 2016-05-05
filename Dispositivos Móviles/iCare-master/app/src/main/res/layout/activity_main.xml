@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingBottom="@dimen/activity_vertical_margin"
+              android:paddingLeft="@dimen/activity_horizontal_margin"
+              android:paddingRight="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/activity_vertical_margin"
+              android:background="@drawable/apng"
+              android:orientation="vertical"
+              tools:context="com.example.publicfinalsdevs.firstaid.MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <utils.RobotoButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#FF59D863"
+            android:textSize="23dp"
+            android:id="@+id/btnperfil"
+            android:text="Perfil"
+            android:textColor="#ffffff"
+            android:drawableTop="@drawable/identification_card"
+            android:paddingTop="20dp"
+            />
+
+        <utils.RobotoButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#9c68d8"
+            android:textSize="23dp"
+            android:id="@+id/btncontactos"
+            android:text="Contactos"
+            android:textColor="#ffffff"
+            android:drawableTop="@drawable/main_contacts"
+            android:paddingTop="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="2">
+
+
+        <utils.RobotoButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#c44039"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="23dp"
+            android:id="@+id/btnSOS"
+            android:text="Emergencia"
+            android:textColor="#ffffff"
+            android:drawableTop="@drawable/emergency_button"
+            android:layout_gravity="top" android:gravity="center" />
+
+        <utils.RobotoButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#3b5998"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="23dp"
+            android:id="@+id/btnPhones"
+            android:text="Telefonos de emergencia"
+            android:onClick="onClick"
+            android:textColor="#ffffff"
+            android:drawableTop="@drawable/phones_icon"
+            android:layout_gravity="top"
+            android:gravity="center"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <utils.RobotoButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#3ebec9"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="23dp"
+            android:id="@+id/btnmap"
+            android:text="Mis Hospitales"
+            android:textColor="#ffffff"
+            android:drawableTop="@drawable/hospital_clinic" />
+
+
+        <utils.RobotoButton
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="#e47501"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="23dp"
+            android:id="@+id/btnfa"
+            android:text="Primeros Auxilios"
+            android:textColor="#ffffff"
+            android:drawableTop="@drawable/firstaidit"
+            android:layout_gravity="top" />
+    </LinearLayout>
+
+</LinearLayout>
+
